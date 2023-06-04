@@ -1,0 +1,149 @@
+<!DOCTYPE html> <!--Version html-->
+<html lang="es"> <!--lang es un atributo de la etiqueta html, que indica el idioma de la pagina-->
+    <head>
+        <meta charset="utf-g" /> <!--para colocar caracteres que van mas halla del codigo de la pagina-->
+        <title>Primer pagina web</title><!--la unica etiqueta visible aca en head es title-->
+        <meta name="description" content="Esta es mi primer Pagina Web" />
+        <meta name="author" content="Maria" /> <!--todo esto solo es informacion del contenido para que sea hallada con mayor facilidad-->
+        <meta name="keywords" content="Mi primer titulo, mi primer pagina, pagina web" />
+        <!--<style> para escribir estilos en la cabeza
+             aqui iran las reglas de CSS que queremos, afecte a toda la pagina
+            header { hay que especificar a que elemento se le aplicara, a que etiqueta
+                background: black;
+                color: white;
+            } 
+
+            #cabecera1 { sirve para poner una regla a todos los elementos con este id, # al principio para identificar que es un id y no un elemento de html. AUNQUE la idea del id es que sea solo para un elemento
+                background: red;
+                color: white;
+            }
+
+            #cabecera2 { sirve para poner una regla a todos los elementos con este id, # al principio para identificar que es un id y no un elemento de html
+                background: green;
+                color: white;
+            }
+
+            footer { la regla CSS afecta a todos los footer, a diferencia del en linea que afecta solo a la etiquete en cuestion
+                background: green
+            }
+
+            .green { clase: como etiqueta que puede ser utilizada en muchos elementos (inicia con .)
+                background: green;
+            }
+            
+            * { para modificar todos los elementos
+                background: green;
+            }
+            
+            blockquote[cite] { todos los elementos blockquote que tengan el atributo cite tengan esto:
+                background: red
+            }
+        </style>-->
+        <link rel="stylesheet" href="estilos.css"> <!--para invocar los estilos desde la otra hoja-->
+    </head>
+    <body>
+
+        <div class="agrupar">
+            <!--los elementos div no le dan mas informacion al navegador, sino para crear otra division no muy tipica. es otro elemento html
+            <div>
+                Contenido Cualquiera
+            </div>-->
+
+            <!--agregar estas reglas aqui se llama agregar CSS en linea, agregar hojas de estilo en linea
+            <header style="background: red"> hay atributos para cada etiqueta, ya preestablecidos. pero style es un atributo que toda etiqueta puede tener(eso ya es CSS)
+                quiero un fondo rojo
+            <header id="cabecera"> id: selectores CSS
+                <h1 style="background: aqua">Mi Blog</h1>
+            <header class="green"> 
+            -->
+            <header class="cabecera">
+                <h1>Mi Blog</h1>
+            </header>
+
+            <!--<nav style="background: blue">
+            <nav id="navegacion">-->
+            <nav class="menu">
+                <ul> <!--lista desordenada en español: tiene un elemento html dentro que permite añadir un elemento de esta lista desordenada-->
+                    <li>Principal</li>
+                    <li>ayuda</li>
+                    <li>contacto</li>
+                </ul>
+        
+                <!-- <ul>
+                    <li>Agua</li>
+                    <li>Otro Ingrediente</li>
+                    <li>Otro Ingrediente Más</li>
+                </ul> 
+                otra lista desordenada-->
+            </nav>
+
+                <section class="seccion"> <!--Agregar elementos a una misma seccion
+                    <article id="cabecera1">-->
+                    <article>
+                        <hgroup> <!--para agrupar encabezados y no darle el mismo nivel de gerarquia que los encabezados-->
+                            <h1>Titulo del primer articulo</h1>
+                            <h2>Subtitulo del Primer Articulo</h2>
+                        </hgroup>
+                        <time datetime="25-04-2023">Publicado 25-04-2023</time>
+                        <!--<img src="images/1.png" /> imagen de almacenamiento local-->
+                        <img src="https://i.pinimg.com/564x/02/4e/4c/024e4c04e38a58a9d793e7c79b57f11c.jpg" /> <!--imagen de internet-->
+                        <p>Lorem ipsum dolor sit amet consectetur, <small>adipisicing elit</small>. Vitae vel doloremque aut autem voluptate magnam, <cite>fugiat voluptatem dolore eum</cite>, debitis at saepe laudantium voluptatum libero, <span>quod corrupti eius tenetur</span> quam!</p>
+                        <footer>
+                            <p>Comentarios (0)</p>
+                        </footer>
+                        <address>
+                            <a href="https://github.com/Cynosure-Project">Visita mi Sitio Web</a>
+                        </address>
+                    </article>
+                    <!--<article id="cabecera"> se puede repetir el id en diferentes elementos y seran afectados, pero la idea es que cada id sea unico
+                    <article id="cabecera2">-->
+                    <article>
+                        <hgroup>
+                            <h1>Titulo del segundo articulo</h1>
+                            <!--<h1 class="green">-->
+                            <h2>Subtitulo del Segundo Articulo</h2>
+                        </hgroup>
+                        <time datetime="25-04-2023">Publicado 25-04-2023</time>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, corporis a cum, ducimus perferendis ullam aspernatur, eveniet aliquam architecto commodi libero explicabo cumque? Eaque quis eos voluptatibus possimus quas ab.</p>
+                        <!--<p class="green">-->
+                        <footer>
+                            <p>Comentarios (0)</p>
+                        </footer>
+                    </article>
+                </section>
+
+            <aside class="columna"> <!--contenido lateral-->
+                <blockquote cite="https://www.youtube.com/watch?v=rbuYtrNUxg4">
+                    Mensaje 1
+                </blockquote>
+
+                <blockquote cite="https://github.com/maria-arcila82221/Visual-Studio-Code">
+                    Mensaje 2
+                </blockquote>
+            </aside>
+
+            <!--color: color de letra
+            <footer style="color: white; background: black"> pie de pagina de un elemento o pagina web-->
+            <footer class="pie">
+                Derechos Reservados 2018-2023
+            </footer>
+
+            <!--<h1>Título del texto</h1>
+            <h2>Subtitulo del texto</h2>
+            <h3>Subtitulo del texto</h2>
+            <h4>Subtitulo del texto</h2>
+            <h5>Subtitulo del texto</h2>
+            <h6>Subtitulo del texto</h2>
+            hay hasta h6-->
+        </div>
+    
+    </body>
+</html>
+
+<!--HTLM SOLO ES UNA MANERA DE ESCRIBIR UN DOCUMENTO, TU DECIDES QUE PONER EN EL-->
+<!--las paginas html no son mas que textos enlazados con otros-->
+<!--con CSS le daremos reglas al navegador para que nos diga como pintar nuestro sitio web-->
+<!--<iframe> sirve para incrustar una pagina web dentro de otra-->
+<!--<div> sirve para crear divisiones, sin ningun otro proposito-->
+<!--<strong> sirve para marcar las partes mas importantes de un texto-->
+<!--hay etiquetas semanticas para cada tipo de elemento dentro de la pagina: como el <footer>-->

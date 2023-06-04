@@ -1,0 +1,55 @@
+/*Todo en flex son elementos flexibles, por tanto los elementos dentro tambien son flexibles. se adaptan al contenedor*/
+
+body {
+    background-color: beige;
+}
+
+.flex-container {
+    border: 1px solid black;
+    background: #ccc;
+    padding: 20px;
+    display: flex;
+    /*flex-direction: row;
+    flex-wrap: wrap; /*flex-wrap: wrap: aconmoda los elementos en funcion del tamaño del contenedor*/
+    flex-flow: row wrap; /*flex-flow: fusion de flex-direction y flex-wrap*/
+    justify-content: center;
+    align-content: center;
+    width: 80%; /*width: ancho de un elemento*/
+    height: 600px;
+    margin: 0 auto;
+}
+
+.caja {
+    border: 1px solid rgb(70, 69, 69);
+    background-color: white;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    /*width: 200px;*/
+    line-height: 200px;
+    text-align: center;
+    margin: 5px;
+    overflow: hidden;
+}
+
+/*order: colocar en el orden que quiera*/
+.c1 {
+    background: lightblue;
+    order: 2;
+    flex-grow: 1; /*flex-grow: prioridad para expandirse, puede o no ser mas grande*/
+    flex-basis: 50%;
+}
+
+.c2 {
+    background: lightcoral;
+    order: 3;
+    flex-grow: 1;
+}
+
+.c3 {
+    background: lightgreen;
+    order: 1;
+    flex-grow: 1;
+}
+
+

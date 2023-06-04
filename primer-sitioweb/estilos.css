@@ -1,0 +1,126 @@
+/*header {
+    background: green;
+}
+
+footer {
+    background: green;
+}*/
+
+h1 {
+    font-size: 20px; /*tamaño*/
+    font-family: sans-serif; /*fuente*/
+    font-weight: bold; /*cambio de peso a las fuentes: grosor de la letra. lighter delgada, bold gruesa*/
+}
+
+h2 {
+    /*font-weight: bold;
+    font-size: 14px;           <--reglas por separado
+    font-family: sans-serif;*/
+    font: bold 14px sans-serif; /*lo mismo pero en una sola regla*/
+}
+
+/*las reglas se le aplicaran a todos estos elementos*/
+header, section, footer, aside, nav, article, hgroup {
+    /*border: 1px solid black; recuadro de un 1px, solid(negro)*/
+    display: block; /*para asegurarse de que todos los elementos sean en bloque*/
+    /*si son en bloque, uno tiende a estar debajo del otro*/
+}
+
+body {
+    text-align: center;
+    background: gray;
+}
+
+.agrupar {
+    width: 960px; /*ancho*/
+    border: 1px solid black;
+    /*margin: auto; margen automatica
+    margin: 30px auto; margen en el eje x es 30px y en y automatico
+    padding: 100px; espaciado*/
+    /*margin es lo que va hacia afuera, y el padding lo que va hacia dentro*/
+    margin: 15px auto
+    /*background: white;*/
+}
+
+* {
+    margin: 0; /*todos los elementos se verian juntos, asi quitariamos los estilos predeterminados del navegador*/
+    padding: 0;
+}
+
+.cabecera {
+    background: #fffbb9;
+    border: 1px solid #999999;
+    padding: 20px;
+}
+
+.cabecera h1 {
+    text-align: left;
+}
+
+.menu {
+    background: #ccc;
+    padding: 5px 15px;
+    text-align: left;
+}
+
+/*el orden de eso .menu li es segun a como esten escritas las etiquetas alla(si li esta dentro de menu va asi, si no, al contrario)*/
+.menu li { /*todos los elementos li que esten dentro de un elemento que tenga la clase menu*/
+    list-style: none; /*quitar diseno por defecto de las listas*/
+    padding: 5px; /*separacion de cada li*/
+    font: bold 14px verdana;
+    display: inline-block; /*elementos en bloque pero alineados (uno al lado del otro)*/
+}
+
+.seccion {
+    margin: 20px;
+    width: 60%; /*ancho elemento, pero el porcentaje de la seccion donde esta*/
+    float: left; /*se le dice al contenido que flote, ignorando sus posiciones por defecto. pero asi se sale del contenido html agrupado*/
+}
+
+article {
+    background: #fffbcc;
+    border: 1px solid #999;
+    padding: 20px; /*espaciado interno*/
+    margin-bottom: 15px; /*margen hacia abajo*/
+}
+
+time {
+    color: #999;
+}
+
+article footer { /*todos los footer dentro de los article*/
+    text-align: right;
+    margin-top: 20px;
+}
+
+.columna {
+    width: 30%; /*tamano adaptable, si se hace con border o margin no es adaptable, seria lo que es*/
+    float: left;
+    margin: 20px 0;
+}
+
+.columna blockquote {
+    /*border: 1px dashed black; lineas punteadas*/
+    border: 1px solid black;
+    padding: 40px;
+    background: #fffbb9;
+    margin-bottom: 20px;
+}
+
+.pie {
+    clear: both; /*si el contenido flota, lo devuelve a la normalidad. mas o menos*/
+    padding: 20px;
+    background: #2d3436;
+    color: #ffffff; /*cambiar color de texto*/
+    /*los numeros hexagesimales tienen 6 digitos*/
+}
+
+img {
+    width: 80px;
+    display: block; /*se muestre debajo de un elemento*/
+    /*text-align: center; se alinee en el centro*/
+    margin: 20px auto; /*se alinee de manera automatica(centro). Asi por que no es texto*/
+}
+
+
+

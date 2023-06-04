@@ -1,0 +1,312 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #262626;
+    color: #ffffff;
+    /*background-color: #000000;*/
+    background-color: #262626;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23424143' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/*navigation*/
+.nav-main {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 20px 0; 
+}
+
+.nav-brand {
+    width: auto; /*width: establece el ancho de un elemento*/
+    height: 51px; /*height: establece el alto de un elemento*/
+}
+
+/* NAV LEFT */
+.nav-main ul {
+    display: flex;
+}
+
+.nav-main ul li{
+    padding: 10px;
+}
+
+.nav-main ul li a {
+    padding: 6px; /*padding: agrega espacio interno dentro de un elemento
+    margin: agrega espacio externo entre elementos.*/
+}
+
+/*.nav-main ul li a:hover: es un selector de CSS que se utiliza para aplicar estilos a los enlaces (<a>) que se encuentran dentro de los elementos <li> que, a su vez, están dentro de una lista desordenada (<ul>) que está dentro de un elemento con la clase .nav-main cuando se realiza un evento de "hover" sobre ellos.*/
+/*hover: es un evento que se desencadena cuando el cursor del mouse se coloca sobre un elemento HTML y luego se retira de él*/
+.nav-main ul li a:hover {
+    border-bottom: 2px solid #ffffff
+}
+
+.nav-main ul.nav-menu {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.menu-btn {
+    position: absolute;/*position: absolute = se utiliza para posicionar un elemento de forma absoluta en relación con su contenedor o con el documento en su conjunto, ignorando el flujo normal de los elementos en el documento.*/
+    cursor: pointer;/*cursor: pointer = el cursor del mouse se cambia a una forma de puntero, como una pequeña mano, para indicar que se puede hacer clic en el elemento.*/
+    top: 15px;
+    right: 30px;
+    z-index: 2;/*z-index: se utiliza para controlar el orden de apilamiento o superposición de elementos posicionados en una página web*/
+    /*los elementos con un valor mayor se mostrarán por encima de los elementos con un valor menor o sin z-index especificado*/
+    /*font-size: 1.5rem;*/
+    display: none;
+}
+
+/* SHOWCASE */
+
+hr {
+    margin: 10px 0;
+}
+
+.showcase {
+    width: 100%;
+    height: 550px;
+    background: url(./img/showcase2.png) no-repeat center center/cover; /*center/cover: que lo abarque todo*/
+    padding-bottom: 50px;/*padding-bottom: se utiliza para establecer el relleno (espacio interno) en la parte inferior de un elemento*/
+    margin-bottom: 20px;/*margin-bottom: se utiliza para establecer el margen inferior de un elemento*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.btn {
+    cursor: pointer; /*cursor: pointer: para que aprezca el incono cuando se va a posicionar el boton*/
+    display: inline-block; /*display: como se muestren y/o organizen los elementos dentro de dicha etiqueta*/
+    /*inline: que sean como una linea*/
+    /*inline-block: el elemento se muestre como una línea en el flujo de texto, pero también acepte propiedades de tamaño (ancho y alto)*/
+    border: 0;
+    font-weight: bold; /*font-weight: se utiliza para especificar el grosor o peso de una fuente de texto*/
+    padding: 10px 20px;
+    background: #463637;
+    color: #ffffff;
+    font-size: 15px;
+    border: 1px solid #ffffff;
+    margin: 10px 0;
+}
+
+.btn:hover {
+    opacity: .7; /*opacity: da transparencia a un objeto. 0 es totalmente transparente - 1 es no tranparente*/
+}
+
+.showcase h2,
+.showcase p {
+    margin-bottom: 10px; /*margin-bottom: se utiliza para establecer el margen inferior de un elemento*/
+}
+
+/* NEWS CARDS */
+.news-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);/*repeat(4, 1fr): 1fr 1fr 1fr 1fr = significa que la grilla se ponga en forma de columnas y la cantidad total seran 4*/
+    gap: 25px; /*gap: para establecer el espacio entre elementos en una cuadrícula o en un diseño de tipo flexbox.*/
+    margin: 10px 0;
+}
+
+.news-cards img {
+    width: 100%;
+    height: 180px;
+}
+
+.news-cards h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.news-cards a {
+    padding: 10px 0;/*padding: 10px 0: espaciado interno de 10 arriba y abajo 0 hacia los lados*/
+    color: #f2f2f2;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.news-cards a:hover {
+    text-decoration: underline;
+}
+
+/* CARDS BANNER ONE */
+.cards-banner-one {
+    width: 100%;
+    height: 350px;
+    background: url(img/tech-red.png) no-repeat center center/cover;
+    margin-bottom: 40px;
+}
+
+.cards-banner-one .content {
+    width: 40%;
+    padding: 90px 0 0 30px;
+    color: #ffffff;
+}
+
+.cards-banner-one p,
+.cards-banner-one h2 {
+    margin: 10px 0 20px 0;
+}
+
+/* CARDS BANNER TWO */
+.cards-banner-two {
+    width: 100%;
+    height: 350px;
+    background: url(./img/image-five.png) no-repeat center center/cover;
+}
+
+.cards-banner-two .content {
+    width: 50%;
+    padding: 100px 0 0 30px;
+}
+
+/* Social */
+.social {
+    margin: 50px;
+}
+
+.social p {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a {
+    margin: 0 30px;
+}
+
+.links a i {
+    font-size: 3rem; /*font-size: 3rem =  significa que el tamaño de la fuente se establecerá en 3 veces el tamaño de la fuente raíz o del elemento padre más cercano con un tamaño de fuente establecido*/
+}
+
+/* FOOTER LINKS */
+.footer-links {
+    background: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-container ul {
+    margin: 0 auto;
+}
+
+.footer-container ul li {
+    line-height: 2.8;/*line-height: se utiliza para establecer la altura de línea en un elemento de texto. Define el espacio vertical entre las líneas de texto dentro de un elemento*/
+}
+
+.footer {
+    background: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/*media queries: son una característica que permite aplicar estilos diferentes a un documento HTML según las características del dispositivo o las condiciones de visualización*/
+@media (max-width: 700px) { /*se aplicaran estos diseños si la pantalla tiene un ancho de 700px o menos*/
+    
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-main ul.nav-menu{
+        display: block;
+        position: absolute;/*position: Cuando se aplica position: absolute a un elemento, se elimina del flujo normal del documento, lo que significa que no afecta la posición de otros elementos en la página. El elemento se posiciona según las coordenadas especificadas mediante las propiedades*/
+        top: 0;/*top: Cuando se aplica position: absolute o position: fixed a un elemento, se puede utilizar la propiedad top para definir la distancia en píxeles, porcentajes u otras unidades de medida desde la parte superior del contenedor posicionado.*/
+        left: 0;/*left: se utiliza en conjunto con la propiedad position para establecer la distancia entre el borde izquierdo de un elemento y su contenedor posicionado más cercano.*/
+        background: #2f3640;
+        height: 100%;
+        padding: 30px;
+        opacity: .9;
+        transform: translateX(-400px);/*transform: se utiliza para aplicar transformaciones visuales a un elemento. Permite modificar la posición, rotación, escala y deformación de un elemento sin afectar el flujo normal del documento.*/
+        /*translate: Se utiliza para mover un elemento en el plano horizontal (translateX) o vertical (translateY), o en ambos ejes a la vez (translate).*/
+        transition: transform .5s ease-in-out;/*transition: se utiliza para especificar una transición suave de un estado de estilo a otro en un elemento*/
+        /*transform: es la propiedad CSS que se está animando en la transición.*/
+        /*ease-in-out: suaviza la transición al principio y al final, lo que significa que la animación comenzará lentamente, acelerará en el medio y luego se desacelerará hacia el final.*/
+    }
+
+    .nav-main ul.nav-menu.show {
+        transform: translateX(-20px);
+    }
+
+    .nav-main ul.nav-menu li{
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .nav-main ul.nav-menu-right {
+        margin-right: 40px;
+    }
+    
+    .news-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-banner-one .content,
+    .cards-banner-two .content {
+        width: 80%;
+    }
+
+    .footer-links .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .news-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .news-cards img {
+        height: 270px;
+    }
+
+    .cards-banner-one .content,
+    .cards-banner-two .content {
+        width: 100%;
+        padding: 60px 20px;
+    }
+
+    .footer-links .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
