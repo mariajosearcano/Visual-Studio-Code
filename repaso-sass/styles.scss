@@ -1,0 +1,43 @@
+@use 'anidacion'; //anidacion: puede invocar estilos sass de otras hojas de estilos
+
+// Variables
+$color-principal: #ccc;
+$color-letra: blue;
+
+body {
+    background: $color-principal;
+}
+
+h1 {
+    color: $color-letra;
+}
+
+p {
+    color: $color-letra;
+}
+
+// Mixins
+@mixin caja_personalizada($fondo: white, $color: $color-letra) { //mixin: como funcion en sass
+    background-color: $fondo;
+    border: 4px solid black;
+    box-shadow: 0px 0px 2px black;
+    color: $color-letra;
+    margin: 20px;
+}
+
+.caja {
+    @include caja_personalizada();
+    //@include caja_personalizada(grey); si le quiero cambiar un valor se lo mando por parametros
+    //@include caja_personalizada($fondo: yellow);
+}
+
+.caja-secundaria {
+    @include caja_personalizada($fondo: gray, $color: red);
+}
+
+// Operadores
+.caja, .caja-secundaria {
+    width: 400px + 100px;
+}
+
+
